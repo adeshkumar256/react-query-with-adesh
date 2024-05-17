@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Adesh Kumar",
+      "age": 29,
+      "designation": "Software Engineer"
+    },
+    {
+      "id": 2,
+      "name": "Kalp Prajapati",
+      "age": 3,
+      "designation": "Manager"
+    },
+    {
+      "id": 3,
+      "name": "Pooja Rani",
+      "age": 26,
+      "designation": "House maker"
+    }
+  ],
+
+  "posts": [
+    {
+      "id": 1,
+      "title": "Hello World",
+      "description": "Hi welcome to the first hello world program."
+    },
+    {
+      "id": 2,
+      "title": "React Query",
+      "description": "Here in this repo we have handled all the details of the react query."
+    },
+    {
+      "id": 3,
+      "title": "useQuery",
+      "description": "useQuery hook/funciton is called to fetch the data"
+    }
+  ]
+}
