@@ -28,7 +28,6 @@ const PollingUsersPage = () => {
     return <h2>Loading...</h2>
   }
   if (isError) {
-    console.log(status, error.message)
     return <h2>{error.message}</h2>
   }
 

@@ -18,10 +18,9 @@ const QueryByIdPage = () => {
     return <h2>Loading...</h2>
   }
   if (isError) {
-    console.log(status, error.message)
     return <h2>{error.message}</h2>
   }
-  console.log(user)
+
   return (
     <div>
       <h2>User Details</h2>

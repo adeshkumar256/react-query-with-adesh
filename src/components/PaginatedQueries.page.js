@@ -19,7 +19,7 @@ export default function PaginatedQueriesPage() {
   if (isLoading || isFetching) {
     return <h2>Loading</h2>
   }
-  const totalPage = data?.data?.length > perPage ? data?.data?.length / perPage : 1
+
   return (
     <div>
       {

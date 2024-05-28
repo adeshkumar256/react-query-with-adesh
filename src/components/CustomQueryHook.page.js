@@ -2,6 +2,7 @@ import React from 'react'
 import { useUsers } from '../hooks/useUsers'
 import { Link } from 'react-router-dom'
 import ListUsers from './common/ListUsers'
+import { Button } from 'react-bootstrap'
 
 const CustomQueryHookPage = () => {
 
@@ -24,7 +25,7 @@ const CustomQueryHookPage = () => {
   }
   return (
     <div>
-      <button onClick={refetch}>{data ? "Refetch Users" : "Fetch Users"}</button>
+      <Button onClick={refetch}>{data ? "Refetch Users" : "Fetch Users"}</Button>
 
       {data ? <>
         <ListUsers users={data?.data} />

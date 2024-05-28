@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import React from 'react'
 import ListUsers from './common/ListUsers'
+import { Button } from 'react-bootstrap'
 
 const FetchingOnClickPage = () => {
 
@@ -53,7 +54,7 @@ const FetchingOnClickPage = () => {
   }
   return (
     <div>
-      <button onClick={refetch}>{data ? "Refetch Users" : "Fetch Users"}</button>
+      <Button onClick={refetch}>{data ? "Refetch Users" : "Fetch Users"}</Button>
       {data ? <ListUsers users={data} /> :
         <h2>Click on the fetch users button to load the users</h2>}
     </div>
