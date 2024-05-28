@@ -1,4 +1,4 @@
-# Getting Started React Query With Adesh Kumar
+# 🌟 Getting Started React Query With Adesh Kumar 🌟
 
 # 🌟 Transform Your Data Handling with React Query! 🌟
 
