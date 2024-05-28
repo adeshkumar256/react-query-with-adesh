@@ -1,13 +1,21 @@
-nav ul {
-  display: flex;
-  background-color: black;
-  margin-block-start: 0;
-  padding: 16px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+body {
+  background-color: beige !important;
 }
 
-nav ul li {
-  list-style-type: none;
-  margin-right: 16px;
-  color: white
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2a3035 !important;
+  text-align: center;
+  line-height: 60px; /* Center text vertically */
+}
+
+.copyright{
+  color: aliceblue;
+}
+
+.navbar {
+  z-index: 2 !important;
 }

@@ -1,8 +1,7 @@
-import { useQuery } from '@tanstack/react-query'
-import axios from 'axios'
 import React from 'react'
 import { useUsers } from '../hooks/useUsers'
 import { Link } from 'react-router-dom'
+import ListUsers from './common/ListUsers'
 
 const CustomQueryHookPage = () => {
 
@@ -28,13 +27,7 @@ const CustomQueryHookPage = () => {
       <button onClick={refetch}>{data ? "Refetch Users" : "Fetch Users"}</button>
 
       {data ? <>
-        {
-          data && data?.data.map(user => (
-            <div key={user.id}>
-              <Link to={`/users/${user.id}`}>{user.name}</Link>
-            </div>
-          ))
-        }
+        <ListUsers users={data?.data} />
       </> :
         <h2>Click on the fetch users button to load the users</h2>}
     </div>

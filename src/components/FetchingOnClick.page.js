@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import React from 'react'
+import ListUsers from './common/ListUsers'
 
 const FetchingOnClickPage = () => {
 
@@ -53,13 +54,7 @@ const FetchingOnClickPage = () => {
   return (
     <div>
       <button onClick={refetch}>{data ? "Refetch Users" : "Fetch Users"}</button>
-      {data ? <ul>
-        {
-          data && data.map(user => (
-            <li key={user.id}>{user.sNo} {user.name}</li>
-          ))
-        }
-      </ul> :
+      {data ? <ListUsers users={data} /> :
         <h2>Click on the fetch users button to load the users</h2>}
     </div>
   )

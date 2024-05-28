@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import ListUsers from './common/ListUsers'
 
 const UsersPage = () => {
   const [isLoading, setLoading] = useState(true)
@@ -21,7 +22,7 @@ const UsersPage = () => {
         setError("Something went wrong")
       })
   }
-
+  console.log(users)
   if (isLoading) {
     return <h2>Loading...</h2>
   }
@@ -30,15 +31,9 @@ const UsersPage = () => {
   }
 
   return (
-    <div>
-      <ul>
-        {
-          users && users.map(user => (
-            <li key={user.id}>{user.name}</li>
-          ))
-        }
-      </ul>
-    </div>
+    <>
+      <ListUsers users={users && users} />
+    </>
   )
 }
 

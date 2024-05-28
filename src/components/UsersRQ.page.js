@@ -3,6 +3,7 @@ import axios from 'axios'
 import React from 'react'
 import AddUserForm from './users/AddUserForm'
 import { useAddUser } from '../hooks/useUsers'
+import ListUsers from './common/ListUsers'
 
 const UsersRQPage = () => {
 
@@ -47,13 +48,7 @@ const UsersRQPage = () => {
         <h4>Add User Form</h4>
         <AddUserForm handleSubmit={handleSubmit} />
       </div>
-      <ul>
-        {
-          data?.data.map(user => (
-            <li key={user.id}>{user.name}</li>
-          ))
-        }
-      </ul>
+      <ListUsers users={data?.data} />
     </div>
   )
 }

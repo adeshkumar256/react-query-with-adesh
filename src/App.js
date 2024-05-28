@@ -1,19 +1,12 @@
 import './App.css';
-import { Link, BrowserRouter, Route, Routes } from 'react-router-dom';
-import HomePage from './components/Home.page';
-import UsersPage from './components/Users.page';
-import UserDetailsPage from './components/UserDetails.page';
+import { BrowserRouter } from 'react-router-dom';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-
-import UsersRQPage from './components/UsersRQ.page';
-import PollingUsersPage from './components/PollingUsers.page';
-import FetchingOnClickPage from './components/FetchingOnClick.page';
-import CustomQueryHookPage from './components/CustomQueryHook.page';
-import { tabs } from './static-data/tabs';
-import QueryByIdPage from './components/QueryById.page';
-import DependentQueriesPage from './components/DependentQueries.page';
-import PaginatedQueriesPage from './components/PaginatedQueries.page';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import SitesRoutes from './routes';
+import Header from './components/common/Header';
+import { Container } from 'react-bootstrap';
+import Footer from './components/common/Footer';
 
 function App() {
   const queryClient = new QueryClient()
@@ -21,28 +14,11 @@ function App() {
 
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <nav>
-          <ul>
-            {
-              tabs.map(tab => (
-                <li key={tab.label}>
-                  <Link to={tab.id}>{tab.label}</Link>
-                </li>
-              ))
-            }
-          </ul>
-        </nav>
-        <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/users' element={<UsersPage />} />
-          <Route path='/usersrq' element={<UsersRQPage />} />
-          <Route path='/polling' element={<PollingUsersPage />} />
-          <Route path='/fetchonclick' element={<FetchingOnClickPage />} />
-          <Route path='/custom-query-hook' element={<CustomQueryHookPage />} />
-          <Route path='/paginated-query' element={<PaginatedQueriesPage userId={1} />} />
-          <Route path='/dependent-query' element={<DependentQueriesPage userId={1} />} />
-          <Route path='/users/:id' element={<QueryByIdPage />} />
-        </Routes>
+        <Header />
+        <Container style={{ overflow: 'auto', padding: '1rem' }}>
+          <SitesRoutes />
+        </Container>
+        <Footer />
       </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} position='bottom-right' />
     </QueryClientProvider>

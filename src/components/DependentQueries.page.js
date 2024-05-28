@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useQuery } from '@tanstack/react-query'
+import { Card } from 'react-bootstrap'
 
 export default function DependentQueriesPage({ userId }) {
   const fetchUserByuserId = (userId) => {
@@ -35,7 +36,7 @@ export default function DependentQueriesPage({ userId }) {
     <div>
       {
         profile?.data?.skills.map(skill => (
-          <p key={skill}>{skill}</p>
+          <Card key={skill}>{skill}</Card>
         ))
       }
     </div>

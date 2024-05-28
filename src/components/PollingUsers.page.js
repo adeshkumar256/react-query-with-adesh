@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import React from 'react'
+import ListUsers from './common/ListUsers'
 
 const PollingUsersPage = () => {
 
@@ -33,13 +34,7 @@ const PollingUsersPage = () => {
 
   return (
     <div>
-      <ul>
-        {
-          data?.data.map(user => (
-            <li key={user.id}>{user.name}</li>
-          ))
-        }
-      </ul>
+      <ListUsers users={data?.data} />
     </div>
   )
 }

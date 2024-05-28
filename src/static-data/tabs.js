@@ -9,7 +9,7 @@ export const tabs = [
   },
   {
     id: 'usersrq',
-    label: 'Fetching users using RQ'
+    label: 'Fetch using RQ'
   },
   {
     id: 'polling',
@@ -17,7 +17,7 @@ export const tabs = [
   },
   {
     id: 'fetchonclick',
-    label: 'Fetch Users On Button Click'
+    label: 'Fetch On Button Click'
   },
   {
     id: 'custom-query-hook',
