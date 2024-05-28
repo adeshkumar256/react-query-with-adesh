@@ -1,0 +1,170 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Adesh Kumar",
+      "age": 29,
+      "designation": "Software Engineer",
+      "email": "adeshkumar256@gmail.com",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "name": "Kalp Prajapati",
+      "age": 3,
+      "designation": "Manager",
+      "email": "adeshkumar1@gmail.com"
+    },
+    {
+      "id": "3",
+      "name": "Pooja Rani",
+      "age": 26,
+      "designation": "House maker",
+      "email": "adeshkumar2@gmail.com"
+    },
+    {
+      "id": "1311",
+      "name": "aaa",
+      "email": "adeshkumar256@gmail.com",
+      "age": 1,
+      "designation": "aaaa"
+    },
+    {
+      "id": "24b4",
+      "name": "sas",
+      "email": "test@example.com",
+      "age": 1,
+      "designation": "sas"
+    },
+    {
+      "id": "51e5",
+      "name": "sasasas",
+      "email": "test@example.com",
+      "age": 1,
+      "designation": "sasasa"
+    },
+    {
+      "id": "2235",
+      "name": "s",
+      "email": "test@example.com",
+      "age": 1,
+      "designation": "s"
+    },
+    {
+      "id": "5942",
+      "name": "sasa",
+      "email": "test@example.com",
+      "age": 1,
+      "designation": "sas"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "Hello World",
+      "description": "Hi welcome to the first hello world program."
+    },
+    {
+      "id": "2",
+      "title": "React Query",
+      "description": "Here in this repo we have handled all the details of the react query."
+    },
+    {
+      "id": "3",
+      "title": "useQuery",
+      "description": "useQuery hook/funciton is called to fetch the data"
+    }
+  ],
+  "profile": [
+    {
+      "id": "1",
+      "skills": [
+        "react",
+        "node",
+        "javascript"
+      ]
+    }
+  ],
+  "colors": [
+    {
+      "id": "1",
+      "name": "Red"
+    },
+    {
+      "id": "2",
+      "name": "Blue"
+    },
+    {
+      "id": "3",
+      "name": "Green"
+    },
+    {
+      "id": "4",
+      "name": "Yellow"
+    },
+    {
+      "id": "5",
+      "name": "Orange"
+    },
+    {
+      "id": "6",
+      "name": "Purple"
+    },
+    {
+      "id": "7",
+      "name": "Black"
+    },
+    {
+      "id": "8",
+      "name": "White"
+    },
+    {
+      "id": "9",
+      "name": "Pink"
+    },
+    {
+      "id": "10",
+      "name": "Brown"
+    },
+    {
+      "id": "11",
+      "name": "Gray"
+    },
+    {
+      "id": "12",
+      "name": "Cyan"
+    },
+    {
+      "id": "13",
+      "name": "Magenta"
+    },
+    {
+      "id": "14",
+      "name": "Maroon"
+    },
+    {
+      "id": "15",
+      "name": "Olive"
+    },
+    {
+      "id": "16",
+      "name": "Lime"
+    },
+    {
+      "id": "17",
+      "name": "Teal"
+    },
+    {
+      "id": "18",
+      "name": "Navy"
+    },
+    {
+      "id": "19",
+      "name": "Silver"
+    },
+    {
+      "id": "20",
+      "name": "Gold"
+    }
+  ]
+}

@@ -21,10 +21,14 @@ export const tabs = [
   },
   {
     id: 'custom-query-hook',
-    label: 'Custome Query Hook'
+    label: 'Custom Query Hook'
   },
   {
-    id: 'user:/id',
-    label: 'User Details'
+    id: 'dependent-query',
+    label: 'Dependent Queries'
   },
+  {
+    id: 'paginated-query',
+    label: 'Paginated Queries'
+  }
 ]

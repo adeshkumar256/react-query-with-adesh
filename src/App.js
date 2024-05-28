@@ -11,6 +11,9 @@ import PollingUsersPage from './components/PollingUsers.page';
 import FetchingOnClickPage from './components/FetchingOnClick.page';
 import CustomQueryHookPage from './components/CustomQueryHook.page';
 import { tabs } from './static-data/tabs';
+import QueryByIdPage from './components/QueryById.page';
+import DependentQueriesPage from './components/DependentQueries.page';
+import PaginatedQueriesPage from './components/PaginatedQueries.page';
 
 function App() {
   const queryClient = new QueryClient()
@@ -36,7 +39,9 @@ function App() {
           <Route path='/polling' element={<PollingUsersPage />} />
           <Route path='/fetchonclick' element={<FetchingOnClickPage />} />
           <Route path='/custom-query-hook' element={<CustomQueryHookPage />} />
-          <Route path='/users/:id' element={<UserDetailsPage />} />
+          <Route path='/paginated-query' element={<PaginatedQueriesPage userId={1} />} />
+          <Route path='/dependent-query' element={<DependentQueriesPage userId={1} />} />
+          <Route path='/users/:id' element={<QueryByIdPage />} />
         </Routes>
       </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} position='bottom-right' />

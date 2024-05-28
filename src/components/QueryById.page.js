@@ -1,8 +1,9 @@
 import React from 'react'
-import { useUsers } from '../hooks/useUsers'
+import { useUser } from '../hooks/useUser'
+import { useParams } from 'react-router'
 
 const QueryByIdPage = () => {
-
+  const { id } = useParams()
   const onSuccess = (data) => {
     console.log("Request is succesfully completed", data)
   }
@@ -11,7 +12,7 @@ const QueryByIdPage = () => {
     console.log("Request is failed!!!", error)
   }
 
-  const { isLoading, data, isError, error, isFetching, status, refetch } = useUsers(onSuccess, onError)
+  const { isLoading, data: user, isError, error, isFetching, status } = useUser(id, onSuccess, onError)
 
   if (isLoading || isFetching) {
     return <h2>Loading...</h2>
@@ -20,17 +21,11 @@ const QueryByIdPage = () => {
     console.log(status, error.message)
     return <h2>{error.message}</h2>
   }
+  console.log(user)
   return (
     <div>
-      <button onClick={refetch}>{data ? "Refetch Users" : "Fetch Users"}</button>
-      {data ? <ul>
-        {
-          data && data?.data.map(user => (
-            <li key={user.id}>{user.name}</li>
-          ))
-        }
-      </ul> :
-        <h2>Click on the fetch users button to load the users</h2>}
+      <h2>User Details</h2>
+      <h4>{user?.data?.name || "Enabled to fetch"}</h4>
     </div>
   )
 }
